@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
         <link href="css/animate.css" rel="stylesheet" type="text/css"/>
+
         <!-- Latest compiled and minified JavaScript -->
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
@@ -16,27 +17,9 @@
         <script>
             $(document).ready(function() {
                 FastClick.attach(document.body);
-                //$("body").removeClass("hidden");
-                //$("body").addClass("animated slideInLeft");
-                setInterval(function() {
-                    //alert(0);
-                    $("#eSplash").removeClass("hidden");
-                    $("#eSplash").addClass("animated bounceInLeft");
-                }, 1000);
-                setInterval(function() {
-                    //alert(0);
-                    $("#eDev").removeClass("hidden");
-                    $("#eDev").addClass("animated bounceInLeft");
-                }, 3000);
-                setInterval(function() {
-                    //alert(0);
-                    $("#splash").addClass("animated zoomOut");
-                }, 5000);
-                setInterval(function() {
-                    //alert(0);
-                    window.location.href = 'home.html';
-                    //$("#splash").remove();                    
-                }, 5500);
+
+                $("body").removeClass("hidden");
+                $("body").addClass("animated slideInRight");
 
             });
         </script>
@@ -67,6 +50,9 @@
                 text-align: center;
                 vertical-align: middle;
             }
+            .info{
+                text-align: left;
+            }
             .info h4 {
                 font-size: 26px;
                 letter-spacing: 2px;
@@ -95,34 +81,50 @@
     </head>
 
 
-    <body>
-        <div id="splash" class="row" style="text-align: center; z-index: 10000; position: fixed; height: 100%; width: 110%; margin-top: -50px; background-color: white; ">
-            <div class="col-md-12 hidden" id="eSplash" style="margin-top: 150px;">
-                <div class="row">
-                    <div class="col-xs-6 col-xs-offset-3">
-                        <h1><img class="img img-responsive" alt="Elizade" style="width: 300px" src="img/logo.gif" /></h1>
+    <body class="hidden">
+
+        <!-- Fixed navbar -->
+        <div id="side">
+            <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header pull-left">                    
+                        <a class="navbar-brand" href="home.html"><i class="fa fa-angle-left"></i></a>
+                        <div class="navbar-brand">News Feed</div>
+                    </div>   
+                    <div class="pull-right">
+                        <a class="navbar-brand pull-right" href="newsfeed.html"><i class="fa fa-refresh"></i></a>
+                        <!--<a class="navbar-brand pull-right" href="index.html"><i class="fa fa-desktop"></i></a>-->
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-xs-8 col-xs-offset-2">
-                        <h1>Mobile CRM</h1>
+            </nav>
+        </div>
+
+        <div class="container" style=" margin-bottom: 20px;">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="box">
+                        <div class="info">
+                            <h4>Welcome To Our App</h4>
+                            <h5>5 MAY 2015</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam aspernatur corporis at explicabo nulla dolore necessitatibus doloremque exercitationem sequi dolorem architecto perferendis quas aperiam debitis dolor soluta!</p>
+                            <a href="" class="btn btn-primary btn-sm pull-right">Read more</a>
+                        </div>
                     </div>
-                </div>
+                </div>        
             </div>
-            <div class="col-md-12 hidden" id="eDev" >
-                <div class="row">
-                    <div class="col-xs-8 col-xs-offset-2">
-                        <h3>Developed by Us</h3>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="box">
+                        <div class="info">
+                            <h4>2015 Award for excellence</h4>                            
+                            <h5>5 MAY 2015</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam aspernatur corporis at explicabo nulla dolore necessitatibus doloremque exercitationem sequi dolorem architecto perferendis quas aperiam debitis dolor soluta!</p>
+                            <!--<a href="" class="btn">Link</a>-->
+                        </div>
                     </div>
-                </div>
+                </div>        
             </div>
         </div>
-        <!--        <div id="splash" width: 1200px; height: 1200px">
-                    
-                </div>-->
-
-
-
 
     </body>
 </html>
